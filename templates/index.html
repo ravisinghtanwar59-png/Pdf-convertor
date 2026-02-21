@@ -1,16 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>PDF Converter</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Free PDF Converter Tool</title>
+<meta name="description" content="Convert images to PDF online free without signup">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+    background: linear-gradient(135deg,#eef2f7,#dce6f5);
+    font-family: Arial, sans-serif;
+}
+
+.card-box{
+    background:white;
+    border-radius:16px;
+    padding:40px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+
+h1{
+    font-weight:700;
+}
+
+.upload-box{
+    border:2px dashed #cfd8e3;
+    border-radius:12px;
+    padding:30px;
+    background:#f8fbff;
+    transition:0.3s;
+}
+
+.upload-box:hover{
+    border-color:#3b82f6;
+    background:#f0f6ff;
+}
+
+.btn-main{
+    background:#3b82f6;
+    color:white;
+    padding:12px 30px;
+    border-radius:8px;
+    font-weight:600;
+}
+
+.btn-main:hover{
+    background:#2563eb;
+    color:white;
+}
+
+.footer{
+    color:#7b8aa0;
+    font-size:14px;
+}
+</style>
+
 </head>
 <body>
 
-<h2>Upload images to convert PDF</h2>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+
+<div class="col-md-6">
+
+<div class="text-center mb-4">
+<h1>Free PDF Converter</h1>
+<p class="text-muted">Convert images to PDF instantly. No signup required.</p>
+</div>
+
+<div class="card-box text-center">
 
 <form action="/convert" method="post" enctype="multipart/form-data">
-<input type="file" name="files" multiple>
-<button>Convert</button>
+
+<div class="upload-box mb-4">
+<input class="form-control" type="file" name="files" multiple required>
+<p class="mt-2 text-muted">Upload one or more images</p>
+</div>
+
+<button class="btn btn-main">Convert to PDF</button>
+
 </form>
+
+</div>
+
+<p class="footer text-center mt-3">
+Simple • Fast • Free
+</p>
+
+</div>
+
+</div>
 
 </body>
 </html>
